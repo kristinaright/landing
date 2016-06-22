@@ -1,0 +1,41 @@
+.row{
+	min-height:530px;
+	}
+.copyright{
+	text-align:center;
+		}
+.contain{
+	min-height:350px;
+	
+		}
+.cont{
+	margin-left: 15%;
+}
+.search{
+
+	min-height:290px;
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.cont{
+	margin-left: 2%;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+.cont{
+	margin-left: 0%;
+}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}

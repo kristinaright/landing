@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+    .normal_link,
+    .active_link{
+	    border: 1px solid #ddd;
+        font-size:17px;
+        padding:3px;
+    }
+	div.center{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <?php
+    $counter = $paginationManager->getAutoincrementNum();
+    ?>
+    <?php foreach($data as $email): ?>
+        <p><?=($counter++)?>. <?=htmlspecialchars($email);?></p>
+    <?php endforeach; ?>
+	 <?php
+    $paginationHelper = new Pagination_Helper($paginationManager);
+    $paginationHelper->setPaginationType(Pagination_Helper::PAGINATION_NORMAL_TYPE)          
+                     ->setCssNormalLinkClass("normal_link")
+                     ->setCssActiveLinkClass("active_link")
+                     ->setRequestUriParameter("param_1", "value_1")
+                     ->setRequestUriParameter("param_2", "value_2")
+                     ->setFragmentIdentifier("result1");
+    ?>
+    <div>
+        Всего записей: <strong><?=$paginationHelper->getPagination()->getCount()?></strong>
+        <?php if ($paginationHelper->getPagination()->getCount()): ?>
+            <br /><br />
+            <div class="center"><?=$paginationHelper->getHtml()?></div>
+        <?php endif; ?>
+    </div>
+</body>
+</html>

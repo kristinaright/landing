@@ -1,0 +1,141 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #868585;
+	background: #fdfcfb;
+	font-weight: normal;
+}
+header{
+	max-width: 100%;
+	min-height: 320px;
+	height: auto;
+    background:#d5bcd6;
+    background-image: linear-gradient(0deg, rgba(225,240,240,1) -10px, rgba(188,184,224,0.7) 50%);
+}
+.panel {
+    margin-bottom: 0px;
+    background-color: rgba(225,240,240,1);
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+.panel-body{
+	max-width: 100%;
+	height: auto;
+	 background:#bcb8e0;
+	 background-image: linear-gradient(180deg, rgba(225,240,240,1) -10px, rgba(255,255,0,0.7) 50%);	 
+	 
+}
+.row{
+	min-height: 320px;
+}
+.contacts {
+min-height: 70px;
+padding:15px;
+}
+.copyright {
+	text-align: center;
+min-height: 50px;
+padding:15px;
+background:#e1e100;
+opacity: .8;
+}
+.about{
+	min-height: 320px;
+}
+.article{
+	max-width: 100%;
+	height: auto;
+    margin: 10%;
+     margin-left: 15%;
+}
+.input-group{
+max-width: 80%;
+	height: auto;
+    margin: 10%;	
+    margin-top: 15%;
+}
+
+.portfolio_items{
+	max-width: 100%;
+	text-align: center;
+	height: auto;
+    margin: 10%;	
+}
+img{
+	max-width: 100%;
+	height: auto;
+    margin: 10%;
+    margin-left: 15%;
+}
+article{
+max-width: 100%;
+	height: auto;
+    margin: 10%;	
+}
+
+h2{
+	 margin: 15%;
+}
+h3{
+	text-align: center;
+	margin-top: 5%;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.input-group{
+max-width: 80%;
+	height: auto;
+    margin: 5%;	
+}
+.article{
+	max-width: 100%;
+	height: auto;
+    margin: 7%;
+}
+.portfolio_item{
+	max-width:50%;
+}
+.links{max-width:50%;}
+.contuct{max-width:50%;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+.logo{
+display:none;
+}
+.input-group{
+max-width: 90%;
+	height: auto;
+    margin: 5%;	
+}
+.article{
+	max-width: 100%;
+	height: auto;
+    margin: 10%;
+}
+.portfolio_items{
+	margin-left: 3%;
+}
+	.portfolio_item{
+	max-width:50%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.logo{
+display:none;
+}
+}
