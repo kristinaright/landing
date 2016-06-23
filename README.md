@@ -1,2 +1,4 @@
 # lending
-Lendingpage+adminpanel
+interface based bootstrap
+Lendingpage
+adminpanel
