@@ -5,11 +5,13 @@
 		$mysqli = new mysqli("localhost", "root", "", "lendingpage");
 		$mysqli -> query("SET NAMES 'utf8'");
 	}
-
+ //add bind
 		function addEmail($email){
 		global $mysqli;
 		connectDB();
-		$success=$mysqli->query("INSERT INTO `users` (`email`) VALUES ('$email')");
+		$stmt = $mysqli->prepare("INSERT INTO `users` (`email`) VALUES (?)");
+        $stmt->bind_param('s', $email);
+		$success=$stmt->execute();
 		closeDB(); 
 		return $success;
 	}
