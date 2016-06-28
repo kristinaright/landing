@@ -35,7 +35,7 @@
 				return xmlhttp;
 			}
 			
-			function checkEmail(email) {				
+			 function checkEmail(email) {				
 				var m = email.match(/^[a-zA-Z0-9][.-_,][^\!@]{2,16}\@[a-zA-Z]{3,7}\.[a-zA-Z]{2,5}$/i);
 				if(m){
 					var xmlhttp = getXmlHttp(); 
@@ -47,11 +47,13 @@
 							if(xmlhttp.status == 200) { 
 								if (xmlhttp.responseText == "error") alert("Ошибка при регистрации, возможно, такой e-mail уже существует!");
 								else if (xmlhttp.responseText == "well") alert("Вы успешно подписались!");
+								else if (xmlhttp.responseText == "bad") alert("e-mail введен неверно!");
 							}
 						}
 					};
 				}
 				else alert("Неверно введен email!");
+			return false;
 			} 
 		</script>
 		<!--<script>window.onload = function(){
@@ -108,9 +110,9 @@
 								</div>
 							</div>
 							<div class="col-xs-12 col-md-6">
-								<form action="" method="post" name="email_form" id="email_form" >
+								<form action="checkemail.php" method="post" name="email_form" id="email_form" onsubmit="checkEmail(getElementById('email_address').value)">
 									<div class="input-group">    			
-										<input type="text"  class="form-control" id="email_address" name="email" placeholder="Your e-mail" aria-describedby="basic-addon2" onsubmit="checkEmail(this.value)" />
+										<input type="text"  class="form-control" id="email_address" name="email" placeholder="Your e-mail" aria-describedby="basic-addon2"  />
 										<span class="input-group-addon" id="basic-addon2">login@example.com</span>
 										<span class="input-group-btn">
 											<button class="btn btn-default" name="submit" type="submit">Ok!</button>

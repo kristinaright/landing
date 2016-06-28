@@ -1,7 +1,9 @@
 <tr><h2>Результаты поиска</h2></tr>
 <?php
 	if((!empty($_GET["words"]))) {
-	    $word = htmlspecialchars($_GET["words"]);
+	    $w = htmlspecialchars($_GET["words"]);
+		//экранируем
+		$word=mysql_escape_string($w);
 		$results = searchMails($word);
 		if(count($results) != 0) {
 			for ($i = 0 ; $i < count($results); $i++) {
