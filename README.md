@@ -1,4 +1,4 @@
-# lending
+# landing
 interface based bootstrap
-Lendingpage
+Landingpage
 adminpanel
